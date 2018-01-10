@@ -36,7 +36,8 @@ app.get('/followers', (req, res, next)=> {
         'User-Agent': req.user.clientID
       }
     };
-    request(FollowersRequest, (error, response,body)=>{
+
+    request(FollowersRequest, (error, response, body)=>{
       res.status(200).send(body);
     });
   }else{
